@@ -24,18 +24,12 @@
     <ClCompile Include="ICE.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="JZ2_GTE.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="ICE.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="JZ2_GTE.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
