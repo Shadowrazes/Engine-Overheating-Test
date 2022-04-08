@@ -1,29 +1,31 @@
 #include "Engine.h"
 
-using namespace std;
+namespace EngineTest {
 
-Engine::Engine(float _boost, float _overheatTemp, float _coolingCoef, float _temperature, float _envrmntTemp):
-    boost(_boost), overheatTemp(_overheatTemp), coolingCoef(_coolingCoef), temperature(_temperature), EnvrmntTemp(_envrmntTemp)
-{
-    
-}
+    Engine::Engine(double _overheatTemp, double _coolingCoef, double _envrmntTemp) :
+        overheatTemp(_overheatTemp), coolingCoef(_coolingCoef), EnvrmntTemp(_envrmntTemp)
+    {
+        boost = 0;
+        temperature = 0;
+    }
 
-Engine::~Engine() {
+    Engine::~Engine() {
 
-}
+    }
 
-float Engine::GetBoost() {
-    return boost;
-}
+    double Engine::GetBoost() {
+        return boost;
+    }
 
-float Engine::GetCoolingCoef() {
-    return coolingCoef;
-}
+    double Engine::GetCoolingCoef() {
+        return coolingCoef;
+    }
 
-float Engine::GetOverheatTemp() {
-    return overheatTemp;
-}
+    double Engine::GetOverheatTemp() {
+        return overheatTemp;
+    }
 
-float Engine::GetTemperature() {
-    return temperature;
+    double Engine::GetTemperature() {
+        return temperature;
+    }
 }
