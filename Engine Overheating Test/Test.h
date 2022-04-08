@@ -2,7 +2,6 @@
 #include "ICE.h"
 #include <thread>
 #include <chrono>
-#include <iostream>
 
 namespace EngineTest {
 	class Test

@@ -51,6 +51,7 @@ int main()
     EngineTest::ICE engine(overheatTemp, C, envrmntTemp, I, funcs, H_m, H_v);
     EngineTest::Test testArea;
 
+    std::cout << "Testing..." << std::endl;
     double time = testArea.TestICE(engine);
     std::vector<double> temperatureList = engine.GetTemperatureList();
     exodus(engine, temperatureList, time);

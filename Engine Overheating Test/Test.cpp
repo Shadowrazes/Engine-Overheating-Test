@@ -6,7 +6,6 @@ namespace EngineTest {
 	}
 
 	void Test::MonitoringTemp(ICE& engine) {
-		std::cout << "Testing..." << std::endl;
 		while (engine.GetTemperature() < engine.GetOverheatTemp() && engine.IsRunning()) {		// наблюдаем за температурой, пока она не критическая
 			std::this_thread::sleep_for(std::chrono::milliseconds(25));							// или движок не выключится сам из-за таймаута
 		}
