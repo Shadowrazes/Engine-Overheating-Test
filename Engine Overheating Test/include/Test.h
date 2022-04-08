@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include "ICE.h"
 #include <thread>
 #include <chrono>
@@ -7,10 +7,10 @@ namespace EngineTest {
 	class Test
 	{
 	private:
-		void MonitoringTemp(ICE& engine);	// мониторинг температуры ДВС
+		void MonitoringTemp(ICE& engine);	// РјРѕРЅРёС‚РѕСЂРёРЅРі С‚РµРјРїРµСЂР°С‚СѓСЂС‹ Р”Р’РЎ
 	public:
 		Test();
-		double TestICE(ICE& engine); // запуск теста ДВС
+		double TestICE(ICE& engine);	// Р·Р°РїСѓСЃРє С‚РµСЃС‚Р° Р”Р’РЎ
 	};
 }
 

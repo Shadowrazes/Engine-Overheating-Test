@@ -1,4 +1,4 @@
-#include "../include/ICE.h"
+п»ї#include "../include/ICE.h"
 #include <chrono>
 #include <cmath>
 #include <future>
@@ -53,7 +53,7 @@ namespace EngineTest {
 
 	void ICE::Launch() {
 		isRunning = true;
-		auto exodus = std::async(&ICE::EngineOperation, this);	// запуск симуляции и ожидание результата
+		auto exodus = std::async(&ICE::EngineOperation, this);	 // Р·Р°РїСѓСЃРє СЃРёРјСѓР»СЏС†РёРё Рё РѕР¶РёРґР°РЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р°
 		exodus.get();
 	}
 

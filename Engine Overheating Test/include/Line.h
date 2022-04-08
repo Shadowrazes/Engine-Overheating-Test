@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 namespace Linear {
 
@@ -9,8 +9,8 @@ namespace Linear {
 
 	class Line {
 	protected:
-		Point start;	// начало отрезка
-		Point end;		// конец отрезка
+		Point start;		// РЅР°С‡Р°Р»Рѕ РѕС‚СЂРµР·РєР°
+		Point end;			// РєРѕРЅРµС† РѕС‚СЂРµР·РєР°
 
 	public:
 		Line(Point _start, Point _end);

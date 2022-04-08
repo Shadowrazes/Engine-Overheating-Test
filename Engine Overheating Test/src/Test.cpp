@@ -1,4 +1,4 @@
-#include "../include/Test.h"
+п»ї#include "../include/Test.h"
 
 namespace EngineTest {
 	Test::Test() {
@@ -9,18 +9,18 @@ namespace EngineTest {
 		int timeout = 198;
 		double time = 0;
 		while (engine.GetTemperature() < engine.GetOverheatTemp() 
-			&& timeout > time) {												// наблюдаем за температурой, пока она не критическая
-			std::this_thread::sleep_for(std::chrono::milliseconds(25));			// или пока не истечет время теста
+			&& timeout > time) {											// РЅР°Р±Р»СЋРґР°РµРј Р·Р° С‚РµРјРїРµСЂР°С‚СѓСЂРѕР№, РїРѕРєР° РѕРЅР° РЅРµ РєСЂРёС‚РёС‡РµСЃРєР°СЏ
+			std::this_thread::sleep_for(std::chrono::milliseconds(25));			// РёР»Рё РїРѕРєР° РЅРµ РёСЃС‚РµС‡РµС‚ РІСЂРµРјСЏ С‚РµСЃС‚Р°
 			time += 0.5;
 		}
-		engine.ShutDown();														// после пергрева отключаем
+		engine.ShutDown();														// РїРѕСЃР»Рµ РїРµСЂРіСЂРµРІР° РѕС‚РєР»СЋС‡Р°РµРј
 		return;
 	}
 
 	 double Test::TestICE(ICE& engine) {
-		std::thread monitoring(&Test::MonitoringTemp, this, std::ref(engine));	// запуск в поток процедуры слежки за температурой
+		std::thread monitoring(&Test::MonitoringTemp, this, std::ref(engine));	// Р·Р°РїСѓСЃРє РІ РїРѕС‚РѕРє РїСЂРѕС†РµРґСѓСЂС‹ СЃР»РµР¶РєРё Р·Р° С‚РµРјРїРµСЂР°С‚СѓСЂРѕР№
 		monitoring.detach();
-		engine.Launch();														// запуск двигателя				
-		return static_cast<double>(engine.GetTemperatureList().size());			// возвращает время (время = размеру отчета)
+		engine.Launch();														// Р·Р°РїСѓСЃРє РґРІРёРіР°С‚РµР»СЏ				
+		return static_cast<double>(engine.GetTemperatureList().size());			// РІРѕР·РІСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ (РІСЂРµРјСЏ = СЂР°Р·РјРµСЂСѓ РѕС‚С‡РµС‚Р°)
 	}
 }

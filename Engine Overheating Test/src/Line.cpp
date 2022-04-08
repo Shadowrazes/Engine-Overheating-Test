@@ -1,4 +1,4 @@
-#include "../include/Line.h"
+﻿#include "../include/Line.h"
 
 namespace Linear {
 
@@ -7,7 +7,7 @@ namespace Linear {
 	}
 
 	Point Line::GetStart() {
-		return start;
+		return start; 
 	}
 
 	Point Line::GetEnd() {

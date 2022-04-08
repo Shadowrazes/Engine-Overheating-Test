@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "Line.h"
 
@@ -10,6 +10,6 @@ namespace Linear {
 	public:
 		LineFunc(Point _start, Point _end);
 
-		double Func(const double& x);		// функция на отрезке
+		double Func(const double& x);			// С„СѓРЅРєС†РёСЏ РЅР° РѕС‚СЂРµР·РєРµ
 	};
 }

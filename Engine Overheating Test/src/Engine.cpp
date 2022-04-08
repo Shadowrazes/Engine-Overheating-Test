@@ -1,4 +1,4 @@
-#include "../include/Engine.h"
+﻿#include "../include/Engine.h"
 
 namespace EngineTest {
 
@@ -6,7 +6,7 @@ namespace EngineTest {
         overheatTemp(_overheatTemp), coolingCoef(_coolingCoef), EnvrmntTemp(_envrmntTemp)
     {
         boost = 0;
-        temperature = 0;
+        temperature = 0; 
     }
 
     Engine::~Engine() {

@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <vector>
 #include "Engine.h"
@@ -6,29 +6,29 @@
 
 namespace EngineTest {
 
-	class ICE : public Engine {						// ДВС
+	class ICE : public Engine {					// Р”Р’РЎ
 
 	protected:
-		bool isRunning;								// статус двигателя
-		double torque;								// текущий крутящий момент
-		double crankshaftSpeed;						// текущая скорость вращения коленвала
-		double inertMoment;							// момент инерции
-		double coefH_m;								// коэффициент зависимости скорости нагрева от крутящего момента
-		double coefH_v;								// коэффициент зависимости скорости нагрева от скорости вращения коленвала
-		std::vector<Linear::LineFunc> chart;		// кусочные функции зависимости крутящего момента от скорости вращения коленвала
-		std::vector<double> temperatureList;		// посекундный отчет температуры
+		bool isRunning;								// СЃС‚Р°С‚СѓСЃ РґРІРёРіР°С‚РµР»СЏ
+		double torque;								// С‚РµРєСѓС‰РёР№ РєСЂСѓС‚СЏС‰РёР№ РјРѕРјРµРЅС‚
+		double crankshaftSpeed;						// С‚РµРєСѓС‰Р°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІСЂР°С‰РµРЅРёСЏ РєРѕР»РµРЅРІР°Р»Р°
+		double inertMoment;							// РјРѕРјРµРЅС‚ РёРЅРµСЂС†РёРё
+		double coefH_m;								// РєРѕСЌС„С„РёС†РёРµРЅС‚ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё СЃРєРѕСЂРѕСЃС‚Рё РЅР°РіСЂРµРІР° РѕС‚ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р°
+		double coefH_v;								// РєРѕСЌС„С„РёС†РёРµРЅС‚ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё СЃРєРѕСЂРѕСЃС‚Рё РЅР°РіСЂРµРІР° РѕС‚ СЃРєРѕСЂРѕСЃС‚Рё РІСЂР°С‰РµРЅРёСЏ РєРѕР»РµРЅРІР°Р»Р°
+		std::vector<Linear::LineFunc> chart;		// РєСѓСЃРѕС‡РЅС‹Рµ С„СѓРЅРєС†РёРё Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р° РѕС‚ СЃРєРѕСЂРѕСЃС‚Рё РІСЂР°С‰РµРЅРёСЏ РєРѕР»РµРЅРІР°Р»Р°
+		std::vector<double> temperatureList;		// РїРѕСЃРµРєСѓРЅРґРЅС‹Р№ РѕС‚С‡РµС‚ С‚РµРјРїРµСЂР°С‚СѓСЂС‹
 
-		double HeatingRate();						// скорость нагрева
-		double CoolingRate();						// скорость охлаждения
-		double FindTorque(const double& x);			// бинарный поиск нужной функции и вычисление от нее крутящего момента 
-		void EngineOperation();						// симуляция работы двигателя
+		double HeatingRate();						// СЃРєРѕСЂРѕСЃС‚СЊ РЅР°РіСЂРµРІР°
+		double CoolingRate();						// СЃРєРѕСЂРѕСЃС‚СЊ РѕС…Р»Р°Р¶РґРµРЅРёСЏ
+		double FindTorque(const double& x);			// Р±РёРЅР°СЂРЅС‹Р№ РїРѕРёСЃРє РЅСѓР¶РЅРѕР№ С„СѓРЅРєС†РёРё Рё РІС‹С‡РёСЃР»РµРЅРёРµ РѕС‚ РЅРµРµ РєСЂСѓС‚СЏС‰РµРіРѕ РјРѕРјРµРЅС‚Р° 
+		void EngineOperation();						// СЃРёРјСѓР»СЏС†РёСЏ СЂР°Р±РѕС‚С‹ РґРІРёРіР°С‚РµР»СЏ
 
 	public:
 		ICE(double _overheatTemp, double _coolingCoef, double _envrmntTemp, double _inertMoment,
 			std::vector<Linear::LineFunc> _chart, double _coefH_m, double _coefH_v);
 
-		void Launch();								// запуск
-		void ShutDown();							// остановка
+		void Launch();								// Р·Р°РїСѓСЃРє
+		void ShutDown();							// РѕСЃС‚Р°РЅРѕРІРєР°
 		bool IsRunning();
 		double GetTorque();
 		double GetCrankshaftSpeed();
