@@ -142,10 +142,16 @@
     <ClCompile Include="Engine Overheating Test.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="ICE.cpp" />
+    <ClCompile Include="Line.cpp" />
+    <ClCompile Include="LineFunc.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="ICE.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="LineFunc.h" />
+    <ClInclude Include="Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
