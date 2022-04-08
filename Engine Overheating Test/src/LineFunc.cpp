@@ -1,4 +1,4 @@
-#include "LineFunc.h"
+#include "include/LineFunc.h"
 
 namespace Linear {
 

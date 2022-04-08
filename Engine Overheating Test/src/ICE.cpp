@@ -1,4 +1,4 @@
-#include "ICE.h"
+#include "include/ICE.h"
 #include <chrono>
 #include <cmath>
 #include <future>
@@ -40,23 +40,19 @@ namespace EngineTest {
 	}
 
 	void ICE::EngineOperation() {
-		isRunning = true;
-		int timeout = 199;
-		int timeAfterStart = 0;
-		while (isRunning && timeAfterStart < timeout) {
+		while (isRunning) {
 			temperatureList.push_back(temperature);
 			temperature += HeatingRate() + CoolingRate();
 			crankshaftSpeed += boost;
 			torque = FindTorque(crankshaftSpeed);
 			boost = torque / inertMoment;
-			timeAfterStart++;
 			std::this_thread::sleep_for(std::chrono::milliseconds(50));
 		}
 		temperatureList.push_back(temperature);
-		isRunning = false;
 	}
 
 	void ICE::Launch() {
+		isRunning = true;
 		auto exodus = std::async(&ICE::EngineOperation, this);	// запуск симул€ции и ожидание результата
 		exodus.get();
 	}

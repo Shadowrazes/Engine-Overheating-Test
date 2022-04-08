@@ -1,6 +1,6 @@
 ﻿#include <iostream>
-#include "ICE.h"
-#include "Test.h"
+#include "include/ICE.h"
+#include "include/Test.h"
 #include <thread>
 #include <string>
 
@@ -11,7 +11,7 @@ double inputEnvrmntTemp() {
             std::string input;
             std::cin >> input;
             for (const auto& it : input)
-                if (!std::isdigit(it))
+                if (!std::isdigit(it) && it != '-')
                     throw std::invalid_argument("A number was expected, but a string was received");
             double envrmntTemp = std::stod(input);
             return envrmntTemp;
