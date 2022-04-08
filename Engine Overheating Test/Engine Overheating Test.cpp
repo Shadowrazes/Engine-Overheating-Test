@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "include/ICE.h"
 #include "include/Test.h"
 #include <thread>
@@ -16,7 +16,7 @@ double inputEnvrmntTemp() {
             double envrmntTemp = std::stod(input);
             return envrmntTemp;
         }
-        catch(std::exception) {
+        catch (std::exception) {
             std::cout << "Incorrect input, try again" << std::endl;
         }
     }

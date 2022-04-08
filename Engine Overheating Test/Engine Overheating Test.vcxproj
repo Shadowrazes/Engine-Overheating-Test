@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine Overheating Test.cpp" />
+    <ClCompile Include="src\Engine.cpp" />
+    <ClCompile Include="src\ICE.cpp" />
+    <ClCompile Include="src\Line.cpp" />
+    <ClCompile Include="src\LineFunc.cpp" />
+    <ClCompile Include="src\Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Engine.h" />
+    <ClInclude Include="include\ICE.h" />
+    <ClInclude Include="include\Line.h" />
+    <ClInclude Include="include\LineFunc.h" />
+    <ClInclude Include="include\Test.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,21 +153,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Engine Overheating Test.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="ICE.cpp" />
-    <ClCompile Include="Line.cpp" />
-    <ClCompile Include="LineFunc.cpp" />
-    <ClCompile Include="Test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="ICE.h" />
-    <ClInclude Include="Line.h" />
-    <ClInclude Include="LineFunc.h" />
-    <ClInclude Include="Test.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
