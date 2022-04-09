@@ -41,14 +41,14 @@ int main()
     for (int i = 0; i < points.size() - 1; i++)
         funcs.push_back(Linear::LineFunc(points[i], points[i + 1]));
     points.clear();
-    double I = 10;
+    double inertMoment = 10;
     double overheatTemp = 110;
     double H_m = 0.01;
     double H_v = 0.0001;
-    double C = 0.1;
+    double coolingCoef = 0.1;
     double envrmntTemp = inputEnvrmntTemp();
 
-    EngineTest::ICE engine(overheatTemp, C, envrmntTemp, I, funcs, H_m, H_v);
+    EngineTest::ICE engine(overheatTemp, coolingCoef, envrmntTemp, inertMoment, funcs, H_m, H_v);
     EngineTest::Test testArea;
 
     std::cout << "Testing..." << std::endl;
