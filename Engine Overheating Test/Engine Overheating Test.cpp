@@ -25,7 +25,7 @@ double inputEnvrmntTemp() {
 void exodus(EngineTest::ICE& engine, const std::vector<double>& temperatureList, const double& time) {
     int count = 0;
     for (const auto& it : temperatureList) {
-        std::cout << ++count << ") " << it << std::endl;
+        std::cout << ++count << ") " << it << "\tdegrees C" << std::endl;
     }
 
     if (temperatureList.back() >= engine.GetOverheatTemp())
