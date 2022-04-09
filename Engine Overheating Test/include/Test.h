@@ -7,10 +7,10 @@ namespace EngineTest {
 	class Test
 	{
 	private:
-		void MonitoringTemp(ICE& engine, double& time);	// мониторинг температуры ДВС
+		void MonitoringTemp(Engine* engine, double& time);	// мониторинг температуры ДВС
 	public:
 		Test();
-		double TestICE(ICE& engine);	// запуск теста ДВС
+		double Launch(Engine* engine);	// запуск теста, приводит передаваемый тип двигателя к базовому классу
 	};
 }
 

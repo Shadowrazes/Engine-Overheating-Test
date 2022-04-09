@@ -48,11 +48,12 @@ int main()
     double coolingCoef = 0.1;
     double envrmntTemp = inputEnvrmntTemp();
 
-    EngineTest::ICE engine(overheatTemp, coolingCoef, envrmntTemp, inertMoment, funcs, H_m, H_v);
+    EngineTest::ICE* JZ2_GTE = new EngineTest::ICE(overheatTemp, coolingCoef, envrmntTemp, inertMoment, funcs, H_m, H_v);
     EngineTest::Test testArea;
 
     std::cout << "Testing..." << std::endl;
-    double time = testArea.TestICE(engine);
-    std::vector<double> temperatureList = engine.GetTemperatureList();
-    exodus(engine, temperatureList, time);
+    double time = testArea.Launch(JZ2_GTE);
+    std::vector<double> temperatureList = JZ2_GTE->GetTemperatureList();
+    exodus(*JZ2_GTE, temperatureList, time);
+    delete JZ2_GTE;
 }
