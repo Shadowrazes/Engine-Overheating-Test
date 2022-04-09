@@ -7,6 +7,6 @@ namespace Linear {
 	}
 
 	double LineFunc::Func(const double& x) {
-		return (x - start.X) * (end.Y - start.Y) / (end.X - start.X) + start.Y; 
+		return (x - start.X) * (end.Y - start.Y) / (end.X - start.X) + start.Y;  // уравнение прямой по двум точкам
 	}
 }
