@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "include/ICE.h"
-#include "include/Test.h"
+#include "include/TestArea.h"
 #include <thread>
 #include <string>
 
@@ -49,7 +49,7 @@ int main()
     double envrmntTemp = inputEnvrmntTemp();
 
     EngineTest::ICE* JZ2_GTE = new EngineTest::ICE(overheatTemp, coolingCoef, envrmntTemp, inertMoment, funcs, H_m, H_v);
-    EngineTest::Test testArea;
+    EngineTest::TestArea testArea;
 
     std::cout << "Testing..." << std::endl;
     double time = testArea.Launch(JZ2_GTE);

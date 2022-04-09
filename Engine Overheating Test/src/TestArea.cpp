@@ -1,11 +1,11 @@
-﻿#include "../include/Test.h"
+﻿#include "../include/TestArea.h"
 
 namespace EngineTest {
-	Test::Test() {
+	TestArea::TestArea() {
 
 	}
 
-	void Test::MonitoringTemp(Engine* engine, double& time) {
+	void TestArea::MonitoringTemp(Engine* engine, double& time) {
 		int timeout = 200;
 		while (engine->GetTemperature() < engine->GetOverheatTemp()
 			&& timeout > time) {											// наблюдаем за температурой, пока она не критическая
@@ -16,9 +16,9 @@ namespace EngineTest {
 		return;
 	}
 
-	 double Test::Launch(Engine* engine) {
+	 double TestArea::Launch(Engine* engine) {
 		double time = 0;
-		std::thread monitoring(&Test::MonitoringTemp, this, std::ref(engine), std::ref(time)); // запуск в поток процедуры слежки за температурой
+		std::thread monitoring(&TestArea::MonitoringTemp, this, std::ref(engine), std::ref(time)); // запуск в поток процедуры слежки за температурой
 		monitoring.detach();
 		engine->Launch();														// запуск двигателя				
 		return time;															// возвращает время нагрева

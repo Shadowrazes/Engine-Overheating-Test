@@ -24,14 +24,14 @@
     <ClCompile Include="src\ICE.cpp" />
     <ClCompile Include="src\Line.cpp" />
     <ClCompile Include="src\LineFunc.cpp" />
-    <ClCompile Include="src\Test.cpp" />
+    <ClCompile Include="src\TestArea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Engine.h" />
     <ClInclude Include="include\ICE.h" />
     <ClInclude Include="include\Line.h" />
     <ClInclude Include="include\LineFunc.h" />
-    <ClInclude Include="include\Test.h" />
+    <ClInclude Include="include\TestArea.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

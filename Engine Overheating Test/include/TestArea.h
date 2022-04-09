@@ -4,12 +4,12 @@
 #include <chrono>
 
 namespace EngineTest {
-	class Test
+	class TestArea
 	{
 	private:
 		void MonitoringTemp(Engine* engine, double& time);	// мониторинг температуры ДВС
 	public:
-		Test();
+		TestArea();
 		double Launch(Engine* engine);	// запуск теста, приводит передаваемый тип двигателя к базовому классу
 	};
 }

@@ -30,7 +30,7 @@
     <ClCompile Include="src\LineFunc.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\Test.cpp">
+    <ClCompile Include="src\TestArea.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="include\LineFunc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\Test.h">
+    <ClInclude Include="include\TestArea.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
